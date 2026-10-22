@@ -1,0 +1,34 @@
+You are a senior React + TypeScript + Vite + Cloudflare Workers engineer.
+Review the ENTIRE existing Ashiskillrise project before editing. Preserve its current visual
+design, page content, courses, Urdu/English language support, mobile responsiveness, and
+existing features unless a change is required to fix a real bug.
+
+Goal: make this exact project build reliably and deploy on Cloudflare Workers with Static
+Assets, including its Worker API, without asking the user to upload raw .tsx files to the
+static-file uploader.
+
+Required work:
+1. Inspect every source/config file, package.json, wrangler.jsonc, worker/index.ts,
+   migrations/0001_initial.sql, and README.md. Do not assume files exist; verify them.
+2. Run dependency installation, TypeScript typecheck, and production build. Fix actual errors
+   rather than merely claiming they are fixed. Do not delete features to silence errors.
+3. Ensure `npm run build` outputs the frontend to `dist`, and `wrangler deploy` serves those
+   assets plus the Worker API. Preserve SPA routing for paths such as /courses and /dashboard.
+4. Do not leave placeholder values such as YOUR_D1_DATABASE_ID_HERE in an active config.
+   Either make D1 optional for a clearly labelled demo deployment or document/create the exact
+   D1 setup and migration steps. Never invent a real database ID.
+5. Check every API route and frontend API fallback. Ensure preview/demo mode works without D1,
+   and clearly disclose that in-memory data is not persistent. Do not store plaintext passwords
+   or use a weak production JWT fallback; require JWT_SECRET as a Cloudflare secret for production.
+6. Check assets, routing, auth flows, responsive layout, console errors, and links. Fix only
+   issues supported by code inspection or tests.
+7. Keep secrets out of the repository. Update .gitignore if needed for node_modules, dist,
+   .dev.vars, and environment files.
+8. Provide a final report listing files changed, exact commands run, build/typecheck results,
+   remaining limitations, and exact Cloudflare dashboard steps. Do not claim a test passed
+   unless it was actually run and passed.
+9. Output the complete corrected project as a ZIP with the project root at the ZIP root,
+   ready for GitHub-based Cloudflare deployment, plus a concise deployment report.
+
+Important: inspect the real project first; do not redesign the website or replace it with a
+generic template. Do not use the "Upload your static files" path for raw TypeScript source.

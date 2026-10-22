@@ -1,0 +1,22 @@
+Ashiskillrise Cloudflare Deployment Correction Report
+================================================
+
+Source archive: ashiskillrise-—-learn,-practice-&-grow.zip
+Project type: React + Vite + TypeScript frontend with Cloudflare Worker API.
+
+Changes made:
+1. Changed the npm package name from the generic react-example to ashiskillrise.
+2. Removed the fake D1 database ID (YOUR_D1_DATABASE_ID_HERE) from wrangler.jsonc.
+   The Worker declares DB as optional and has an in-memory demo fallback, so a first
+   preview deployment no longer fails just because no D1 database ID has been supplied.
+3. Added clearer Cloudflare deployment instructions to README.md explaining that the
+   source ZIP must not be uploaded directly to the static-file uploader; .tsx source
+   needs a Vite build, and full app deployment should include the Worker.
+4. Documented the need to set JWT_SECRET as a Cloudflare Worker secret and the limitations
+   of in-memory demo data without D1.
+
+Not verified:
+- npm install did not complete within the available execution window.
+- Therefore build, typecheck, and live Cloudflare deployment have not been confirmed.
+- The app is not yet production-ready for persistent user accounts until D1 is configured
+  and its migration is applied.

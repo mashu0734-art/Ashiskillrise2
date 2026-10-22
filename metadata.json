@@ -1,0 +1,6 @@
+{
+  "name": "Ashiskillrise — Learn, Practice & Grow",
+  "description": "Learn New Skills. Build Your Future. Mobile-first educational platform for digital skills, practice lessons, courses, and freelancing preparation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
