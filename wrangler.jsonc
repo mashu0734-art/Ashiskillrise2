@@ -11,6 +11,13 @@
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ashiskillrise-db",
+      "database_id": "YOUR_D1_DATABASE_ID_PLACEHOLDER"
+    }
+  ],
   "vars": {
     "ENVIRONMENT": "production"
   }
