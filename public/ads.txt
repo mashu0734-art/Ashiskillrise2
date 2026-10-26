@@ -1,3 +1,5 @@
-# Google AdSense ads.txt for Ashiskillrise
-# Replace pub-0000000000000000 with your approved Google AdSense publisher ID
+# Ashiskillrise Monetization ads.txt
+# Google AdSense (Optional fallback)
 google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Adsterra Network (Add your custom publisher account lines here if supplied in dashboard)

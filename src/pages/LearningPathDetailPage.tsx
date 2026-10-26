@@ -14,6 +14,7 @@ import { api } from '../lib/api';
 import { LearningPath } from '../data/learningPathsData';
 import { Course } from '../data/coursesData';
 import CourseCard from '../components/CourseCard';
+import AdBanner from '../components/AdBanner';
 
 export default function LearningPathDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -191,9 +192,15 @@ export default function LearningPathDetailPage() {
                 ))}
               </ul>
             </div>
+
+            {/* Adsterra Skyscraper Banner (160x300) in Sidebar */}
+            <AdBanner unit="160x300" className="my-0" />
           </div>
         </div>
       </section>
+
+      {/* Adsterra Leaderboard Banner */}
+      <AdBanner unit="responsive-leaderboard" />
     </div>
   );
 }

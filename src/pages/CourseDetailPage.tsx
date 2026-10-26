@@ -18,6 +18,7 @@ import { api } from '../lib/api';
 import { Course, INITIAL_COURSES } from '../data/coursesData';
 import { useAuth } from '../context/AuthContext';
 import CourseCard from '../components/CourseCard';
+import AdBanner from '../components/AdBanner';
 
 export default function CourseDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -236,6 +237,9 @@ export default function CourseDetailPage() {
               </div>
             </div>
 
+            {/* Adsterra Standard Banner (468x60 / 320x50) */}
+            <AdBanner unit="responsive-banner" />
+
             {/* Course Syllabus / Lessons List */}
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -368,9 +372,17 @@ export default function CourseDetailPage() {
                 <span>Save to Library</span>
               </button>
             </div>
+
+            {/* Adsterra Medium Rectangle (300x250) in Sidebar */}
+            <AdBanner unit="300x250" className="my-0" />
           </div>
         </div>
       </section>
+
+      {/* Adsterra Native Banner Unit */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <AdBanner unit="native" />
+      </div>
 
       {/* 3. Related Courses */}
       {relatedCourses.length > 0 && (

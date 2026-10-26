@@ -23,6 +23,7 @@ import { Course, Lesson, CourseSection } from '../data/coursesData';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import CertificateModal from '../components/CertificateModal';
+import AdBanner from '../components/AdBanner';
 
 export default function LessonViewerPage() {
   const { courseSlug, lessonSlug } = useParams<{ courseSlug: string; lessonSlug: string }>();
@@ -302,6 +303,9 @@ export default function LessonViewerPage() {
               </div>
             </div>
 
+            {/* Adsterra Leaderboard Banner (728x90 Desktop, 320x50 Mobile) */}
+            <AdBanner unit="responsive-leaderboard" className="my-3" />
+
             {/* Markdown Lesson Content */}
             <div className="prose dark:prose-invert max-w-none text-sm text-slate-700 dark:text-slate-300 leading-relaxed pt-4 border-t border-slate-100 dark:border-slate-800 space-y-4">
               {currentLesson.content.split('\n\n').map((paragraph, idx) => {
@@ -452,6 +456,9 @@ export default function LessonViewerPage() {
             </div>
           </div>
 
+          {/* Adsterra Native Banner Unit */}
+          <AdBanner unit="native" />
+
           {/* Previous / Next Lesson Navigation Controls */}
           <div className="flex items-center justify-between pt-4 pb-12 border-t border-slate-200 dark:border-slate-800">
             {prevLesson ? (
@@ -554,6 +561,11 @@ export default function LessonViewerPage() {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* Adsterra Wide Skyscraper Banner (160x600) */}
+          <div className="mt-4 flex justify-center">
+            <AdBanner unit="160x600" className="my-0 w-full" />
           </div>
         </div>
       </div>

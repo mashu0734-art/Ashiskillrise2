@@ -15,6 +15,7 @@ import { api } from '../../lib/api';
 import { Course, INITIAL_COURSES } from '../../data/coursesData';
 import { useAuth } from '../../context/AuthContext';
 import CourseCard from '../../components/CourseCard';
+import AdBanner from '../../components/AdBanner';
 
 export default function DashboardOverviewPage() {
   const { user } = useAuth();
@@ -231,6 +232,9 @@ export default function DashboardOverviewPage() {
               Keep your streak alive by practicing one exercise today.
             </div>
           </div>
+
+          {/* Adsterra Medium Rectangle (300x250) */}
+          <AdBanner unit="300x250" className="my-0" />
         </div>
       </div>
 

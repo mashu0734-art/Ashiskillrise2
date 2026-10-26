@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layers, ArrowRight, CheckCircle2, Code, FileText, Download } from 'lucide-react';
+import AdBanner from '../components/AdBanner';
 
 export default function PracticeProjectsPage() {
   const projects = [
@@ -60,6 +61,9 @@ export default function PracticeProjectsPage() {
         </p>
       </div>
 
+      {/* Adsterra Leaderboard Banner */}
+      <AdBanner unit="responsive-leaderboard" />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map(p => (
           <div
@@ -110,6 +114,12 @@ export default function PracticeProjectsPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Adsterra Showcase Banner Grid (300x250 Medium Rectangle & 160x300 Skyscraper) */}
+      <div className="flex flex-wrap items-center justify-center gap-6 pt-6">
+        <AdBanner unit="300x250" className="my-0" />
+        <AdBanner unit="160x300" className="my-0" />
       </div>
     </div>
   );

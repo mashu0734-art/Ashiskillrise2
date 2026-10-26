@@ -4,6 +4,7 @@ import { Search, Filter, X, BookOpen, SlidersHorizontal, RotateCcw } from 'lucid
 import { api } from '../lib/api';
 import { Course, CATEGORIES } from '../data/coursesData';
 import CourseCard from '../components/CourseCard';
+import AdBanner from '../components/AdBanner';
 
 export default function CourseCatalogPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -120,6 +121,9 @@ export default function CourseCatalogPage() {
           Explore complete digital skill curriculums designed for practical application.
         </p>
       </div>
+
+      {/* Adsterra Leaderboard Banner (728x90 Desktop, 320x50 Mobile) */}
+      <AdBanner unit="responsive-leaderboard" />
 
       {/* Filter and Search Bar */}
       <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900 shadow-sm">
@@ -279,6 +283,9 @@ export default function CourseCatalogPage() {
           </button>
         </div>
       )}
+
+      {/* Adsterra Native Banner Unit */}
+      <AdBanner unit="native" />
     </div>
   );
 }

@@ -28,6 +28,7 @@ import {
 import { INITIAL_COURSES, CATEGORIES } from '../data/coursesData';
 import { LEARNING_PATHS } from '../data/learningPathsData';
 import CourseCard from '../components/CourseCard';
+import AdBanner from '../components/AdBanner';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function HomePage() {
@@ -275,6 +276,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Adsterra Leaderboard Banner (728x90 on Desktop, 320x50 on Mobile) */}
+      <AdBanner unit="responsive-leaderboard" />
+
       {/* 4. Structured Learning Roadmaps */}
       <section className="rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:p-8 space-y-6 dark:border-slate-800 dark:bg-slate-900/50">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -453,6 +457,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Adsterra Standard Banner (468x60 on Desktop/Tablet, 320x50 on Mobile) */}
+      <AdBanner unit="responsive-banner" />
+
       {/* 6. Why Ashiskillrise / Free Platform Guarantee */}
       <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 space-y-6 dark:border-slate-800 dark:bg-slate-900">
         <div className="text-center max-w-xl mx-auto space-y-1">
@@ -496,6 +503,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Adsterra Native Banner Unit */}
+      <AdBanner unit="native" />
 
       {/* 7. Call To Action (CTA) Banner */}
       <section className="rounded-3xl bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 p-8 sm:p-12 text-center text-white space-y-4 shadow-lg">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2, Search, BookOpen, ExternalLink } from 'lucide-react';
+import AdBanner from '../components/AdBanner';
 
 export default function FreeResourcesPage() {
   const [downloaded, setDownloaded] = useState<string | null>(null);
@@ -82,6 +83,9 @@ export default function FreeResourcesPage() {
         </div>
       )}
 
+      {/* Adsterra Leaderboard Banner */}
+      <AdBanner unit="responsive-leaderboard" />
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {resources.map(res => (
           <div
@@ -116,6 +120,9 @@ export default function FreeResourcesPage() {
           </div>
         ))}
       </div>
+
+      {/* Adsterra Native Banner Unit */}
+      <AdBanner unit="native" />
     </div>
   );
 }

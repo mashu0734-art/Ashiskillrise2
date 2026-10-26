@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Flame, CheckCircle2, Clock, Zap, ArrowRight, RefreshCw, Trophy } from 'lucide-react';
+import AdBanner from '../components/AdBanner';
 
 export default function DailyChallengesPage() {
   const [solution, setSolution] = useState('');
@@ -115,6 +116,9 @@ export default function DailyChallengesPage() {
         )}
       </div>
 
+      {/* Adsterra Standard Banner (468x60 / 320x50) */}
+      <AdBanner unit="responsive-banner" />
+
       {/* Upcoming Weekly Drills Preview */}
       <div className="space-y-4">
         <h3 className="text-base font-bold text-slate-900 dark:text-white">
@@ -135,6 +139,9 @@ export default function DailyChallengesPage() {
           ))}
         </div>
       </div>
+
+      {/* Adsterra Native Banner Unit */}
+      <AdBanner unit="native" />
     </div>
   );
 }

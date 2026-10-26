@@ -15,6 +15,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { LEARNING_PATHS, LearningPath } from '../data/learningPathsData';
+import AdBanner from '../components/AdBanner';
 
 export default function LearningPathsPage() {
   const getPathIcon = (iconName: string) => {
@@ -44,6 +45,9 @@ export default function LearningPathsPage() {
           Step-by-step ordered curriculums combining multiple digital courses to help you transition into freelancing or modern digital employment.
         </p>
       </div>
+
+      {/* Adsterra Leaderboard Banner */}
+      <AdBanner unit="responsive-leaderboard" />
 
       {/* Grid of 6 Learning Paths */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -103,6 +107,9 @@ export default function LearningPathsPage() {
           </div>
         ))}
       </div>
+
+      {/* Adsterra Native Banner Unit */}
+      <AdBanner unit="native" />
     </div>
   );
 }

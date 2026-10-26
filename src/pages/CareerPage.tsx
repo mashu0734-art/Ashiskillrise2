@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Award, Briefcase, FileText, CheckCircle2, ChevronRight, Calculator, MessageSquare } from 'lucide-react';
+import AdBanner from '../components/AdBanner';
 
 export default function CareerPage() {
   // Mini freelance rate calculator
@@ -161,8 +162,14 @@ export default function CareerPage() {
               </span>
             </div>
           </div>
+
+          {/* Adsterra Medium Rectangle (300x250) in Sidebar */}
+          <AdBanner unit="300x250" className="my-0" />
         </div>
       </div>
+
+      {/* Adsterra Leaderboard Banner */}
+      <AdBanner unit="responsive-leaderboard" />
     </div>
   );
 }
